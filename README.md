@@ -1,4 +1,4 @@
-# Spring boot demo Virtual Threads
+# Spring Boot Virtual Threads
 
 ## By Spring configuration 
 With Spring Boot you can enable virtual thread by setting the following property instead of manual configuration. When enabled, Spring Boot leverage virtual threads by using them for various Spring components such as MVC, JDBC and task executors etc.
