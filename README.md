@@ -1,12 +1,12 @@
-# Spring boot demo Virtual Threads
+# Spring Boot Virtual Threads
 
-## By Spring configuration 
+### By Spring configuration 
 With Spring Boot you can enable virtual thread by setting the following property instead of manual configuration. When enabled, Spring Boot leverage virtual threads by using them for various Spring components such as MVC, JDBC and task executors etc.
 ```
 spring.threads.virtual.enabled=true
 ```
 
-## By Manual configuration for certain components
+### By Manual configuration for certain components
 Replacing the default Tomcat thread pool with a virtual thread executor. Instead of using a fixed thread pool, Tomcat now creates a new virtual thread for each request.
 ```
 @Bean
@@ -15,12 +15,12 @@ public TomcatProtocolHandlerCustomizer<?> protocolHandlerVirtualThreadExecutorCu
 }
 ```
 
-## Run the application
+### Run the application
 ```
 $ ./mvnw spring-boot:run
 ``` 
 
-## Invoke the service
+### Invoke the service
 ```
 $ curl localhost:8080
 Hello from VirtualThread[#39]/runnable@ForkJoinPool-1-worker-1
